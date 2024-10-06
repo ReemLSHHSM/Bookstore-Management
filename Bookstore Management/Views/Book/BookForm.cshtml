@@ -1,0 +1,36 @@
+﻿@model Bookstore_Management.Models.Book
+
+<div>
+    <label>
+        <span>Title</span>
+        <input asp-for="Title" />
+    </label>
+    <label>
+        <span>Author</span>
+        <input asp-for="Author" />
+    </label>
+    <label>
+        <span>Genre</span>
+        <input asp-for="Genre" />
+    </label>
+    <label>
+        <span>Price</span>
+        <input asp-for="Price" />
+    </label>
+
+    @if (Model.Id > 0)
+    {
+        <input type="hidden" asp-for="Id" />
+    }
+</div>
+
+<div asp-validation-summary="All"></div>
+
+@if (Model.Id > 0)
+{
+    <button type="submit" class="btn btn-primary">Update</button>
+}
+else
+{
+    <button type="submit" class="btn btn-success">Submit</button>
+}

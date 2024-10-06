@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Bookstore_Management.Models.Book>
+
+<h1>All Books</h1>
+
+<div>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>View Details</td>
+        </tr>
+        @foreach(var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td><a asp-action="Details" class="btn btn-primary" asp-route-id="@book.Id">View Details</a></td>
+            </tr>
+        }
+    </table>
+</div>

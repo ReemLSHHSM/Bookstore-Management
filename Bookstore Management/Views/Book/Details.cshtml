@@ -1,0 +1,19 @@
+﻿@model Bookstore_Management.Models.Book
+
+
+<h1>Book Details</h1>
+<div>
+<h3>@Model.Title</h3>
+<h4>@Model.Author</h4>
+<h4>@Model.Genre</h4>
+<h4>@Model.Price</h4>
+</div>
+
+<div>
+
+     <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit Book Details</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    <a asp-action="Create" class="btn-btn-secondary">Add Book</a>
+    <a asp-action="Index" class="btn btn-secondary">Go To All Books</a>
+   
+</div>

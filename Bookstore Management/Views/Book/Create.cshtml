@@ -1,0 +1,9 @@
+﻿@model Bookstore_Management.Models.Book
+
+<h1>Add Books</h1>
+<div>
+    <form method="post" asp-action="Create" asp-controller="Book">
+        <partial name="BookForm" />
+    </form>
+    <a asp-action="Index" class="btn btn-primary">View All Books</a>
+</div>
